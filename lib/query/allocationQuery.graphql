@@ -1,0 +1,30 @@
+query NetworkDetails($id: ID!) {
+    indexers(where: {id: $id}) {
+        id
+        url
+        stakedTokens
+        allocatedTokens
+        delegatedTokens
+        allocations(where: {status: Active}) {
+            indexingRewards
+            allocatedTokens
+            status
+            id
+            createdAt
+            subgraphDeployment {
+                signalledTokens
+                createdAt
+                stakedTokens
+                originalName
+                id
+            }
+            createdAtEpoch
+            createdAtBlockNumber
+        }
+        allocatedTokens
+        stakedTokens
+        delegatedTokens
+    }
+}
+
+
