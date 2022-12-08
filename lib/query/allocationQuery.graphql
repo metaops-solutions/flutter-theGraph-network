@@ -1,11 +1,12 @@
-query NetworkDetails($id: ID!) {
-    indexers(where: {id: $id}) {
+query networkDetails {
+    indexers(where: { id: "0x5fed46c4f1748213760bb0b0704a35203ced6e5c" }) {
         id
         url
         stakedTokens
         allocatedTokens
+        defaultDisplayName
         delegatedTokens
-        allocations(where: {status: Active}) {
+        allocations(where: { status: Active }) {
             indexingRewards
             allocatedTokens
             status
@@ -17,14 +18,10 @@ query NetworkDetails($id: ID!) {
                 stakedTokens
                 originalName
                 id
+
             }
             createdAtEpoch
             createdAtBlockNumber
         }
-        allocatedTokens
-        stakedTokens
-        delegatedTokens
     }
 }
-
-

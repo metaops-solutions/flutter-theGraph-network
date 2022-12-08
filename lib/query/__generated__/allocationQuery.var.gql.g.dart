@@ -6,131 +6,89 @@ part of 'allocationQuery.var.gql.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-Serializer<GNetworkDetailsVars> _$gNetworkDetailsVarsSerializer =
-    new _$GNetworkDetailsVarsSerializer();
+Serializer<GnetworkDetailsVars> _$gnetworkDetailsVarsSerializer =
+    new _$GnetworkDetailsVarsSerializer();
 
-class _$GNetworkDetailsVarsSerializer
-    implements StructuredSerializer<GNetworkDetailsVars> {
+class _$GnetworkDetailsVarsSerializer
+    implements StructuredSerializer<GnetworkDetailsVars> {
   @override
   final Iterable<Type> types = const [
-    GNetworkDetailsVars,
-    _$GNetworkDetailsVars
+    GnetworkDetailsVars,
+    _$GnetworkDetailsVars
   ];
   @override
-  final String wireName = 'GNetworkDetailsVars';
+  final String wireName = 'GnetworkDetailsVars';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GNetworkDetailsVars object,
+      Serializers serializers, GnetworkDetailsVars object,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      'id',
-      serializers.serialize(object.id, specifiedType: const FullType(String)),
-    ];
-
-    return result;
+    return <Object?>[];
   }
 
   @override
-  GNetworkDetailsVars deserialize(
+  GnetworkDetailsVars deserialize(
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new GNetworkDetailsVarsBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
+    return new GnetworkDetailsVarsBuilder().build();
   }
 }
 
-class _$GNetworkDetailsVars extends GNetworkDetailsVars {
-  @override
-  final String id;
+class _$GnetworkDetailsVars extends GnetworkDetailsVars {
+  factory _$GnetworkDetailsVars(
+          [void Function(GnetworkDetailsVarsBuilder)? updates]) =>
+      (new GnetworkDetailsVarsBuilder()..update(updates))._build();
 
-  factory _$GNetworkDetailsVars(
-          [void Function(GNetworkDetailsVarsBuilder)? updates]) =>
-      (new GNetworkDetailsVarsBuilder()..update(updates))._build();
-
-  _$GNetworkDetailsVars._({required this.id}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'GNetworkDetailsVars', 'id');
-  }
+  _$GnetworkDetailsVars._() : super._();
 
   @override
-  GNetworkDetailsVars rebuild(
-          void Function(GNetworkDetailsVarsBuilder) updates) =>
+  GnetworkDetailsVars rebuild(
+          void Function(GnetworkDetailsVarsBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GNetworkDetailsVarsBuilder toBuilder() =>
-      new GNetworkDetailsVarsBuilder()..replace(this);
+  GnetworkDetailsVarsBuilder toBuilder() =>
+      new GnetworkDetailsVarsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GNetworkDetailsVars && id == other.id;
+    return other is GnetworkDetailsVars;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, id.hashCode));
+    return 593256482;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GNetworkDetailsVars')..add('id', id))
-        .toString();
+    return newBuiltValueToStringHelper(r'GnetworkDetailsVars').toString();
   }
 }
 
-class GNetworkDetailsVarsBuilder
-    implements Builder<GNetworkDetailsVars, GNetworkDetailsVarsBuilder> {
-  _$GNetworkDetailsVars? _$v;
+class GnetworkDetailsVarsBuilder
+    implements Builder<GnetworkDetailsVars, GnetworkDetailsVarsBuilder> {
+  _$GnetworkDetailsVars? _$v;
 
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
-
-  GNetworkDetailsVarsBuilder();
-
-  GNetworkDetailsVarsBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _id = $v.id;
-      _$v = null;
-    }
-    return this;
-  }
+  GnetworkDetailsVarsBuilder();
 
   @override
-  void replace(GNetworkDetailsVars other) {
+  void replace(GnetworkDetailsVars other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GNetworkDetailsVars;
+    _$v = other as _$GnetworkDetailsVars;
   }
 
   @override
-  void update(void Function(GNetworkDetailsVarsBuilder)? updates) {
+  void update(void Function(GnetworkDetailsVarsBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GNetworkDetailsVars build() => _build();
+  GnetworkDetailsVars build() => _build();
 
-  _$GNetworkDetailsVars _build() {
-    final _$result = _$v ??
-        new _$GNetworkDetailsVars._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'GNetworkDetailsVars', 'id'));
+  _$GnetworkDetailsVars _build() {
+    final _$result = _$v ?? new _$GnetworkDetailsVars._();
     replace(_$result);
     return _$result;
   }

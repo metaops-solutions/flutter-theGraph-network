@@ -6,31 +6,31 @@ part of 'allocationQuery.data.gql.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-Serializer<GNetworkDetailsData> _$gNetworkDetailsDataSerializer =
-    new _$GNetworkDetailsDataSerializer();
-Serializer<GNetworkDetailsData_indexers>
-    _$gNetworkDetailsDataIndexersSerializer =
-    new _$GNetworkDetailsData_indexersSerializer();
-Serializer<GNetworkDetailsData_indexers_allocations>
-    _$gNetworkDetailsDataIndexersAllocationsSerializer =
-    new _$GNetworkDetailsData_indexers_allocationsSerializer();
-Serializer<GNetworkDetailsData_indexers_allocations_subgraphDeployment>
-    _$gNetworkDetailsDataIndexersAllocationsSubgraphDeploymentSerializer =
-    new _$GNetworkDetailsData_indexers_allocations_subgraphDeploymentSerializer();
+Serializer<GnetworkDetailsData> _$gnetworkDetailsDataSerializer =
+    new _$GnetworkDetailsDataSerializer();
+Serializer<GnetworkDetailsData_indexers>
+    _$gnetworkDetailsDataIndexersSerializer =
+    new _$GnetworkDetailsData_indexersSerializer();
+Serializer<GnetworkDetailsData_indexers_allocations>
+    _$gnetworkDetailsDataIndexersAllocationsSerializer =
+    new _$GnetworkDetailsData_indexers_allocationsSerializer();
+Serializer<GnetworkDetailsData_indexers_allocations_subgraphDeployment>
+    _$gnetworkDetailsDataIndexersAllocationsSubgraphDeploymentSerializer =
+    new _$GnetworkDetailsData_indexers_allocations_subgraphDeploymentSerializer();
 
-class _$GNetworkDetailsDataSerializer
-    implements StructuredSerializer<GNetworkDetailsData> {
+class _$GnetworkDetailsDataSerializer
+    implements StructuredSerializer<GnetworkDetailsData> {
   @override
   final Iterable<Type> types = const [
-    GNetworkDetailsData,
-    _$GNetworkDetailsData
+    GnetworkDetailsData,
+    _$GnetworkDetailsData
   ];
   @override
-  final String wireName = 'GNetworkDetailsData';
+  final String wireName = 'GnetworkDetailsData';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GNetworkDetailsData object,
+      Serializers serializers, GnetworkDetailsData object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[
       '__typename',
@@ -39,17 +39,17 @@ class _$GNetworkDetailsDataSerializer
       'indexers',
       serializers.serialize(object.indexers,
           specifiedType: const FullType(
-              BuiltList, const [const FullType(GNetworkDetailsData_indexers)])),
+              BuiltList, const [const FullType(GnetworkDetailsData_indexers)])),
     ];
 
     return result;
   }
 
   @override
-  GNetworkDetailsData deserialize(
+  GnetworkDetailsData deserialize(
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new GNetworkDetailsDataBuilder();
+    final result = new GnetworkDetailsDataBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -64,7 +64,7 @@ class _$GNetworkDetailsDataSerializer
         case 'indexers':
           result.indexers.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GNetworkDetailsData_indexers)
+                const FullType(GnetworkDetailsData_indexers)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -74,19 +74,19 @@ class _$GNetworkDetailsDataSerializer
   }
 }
 
-class _$GNetworkDetailsData_indexersSerializer
-    implements StructuredSerializer<GNetworkDetailsData_indexers> {
+class _$GnetworkDetailsData_indexersSerializer
+    implements StructuredSerializer<GnetworkDetailsData_indexers> {
   @override
   final Iterable<Type> types = const [
-    GNetworkDetailsData_indexers,
-    _$GNetworkDetailsData_indexers
+    GnetworkDetailsData_indexers,
+    _$GnetworkDetailsData_indexers
   ];
   @override
-  final String wireName = 'GNetworkDetailsData_indexers';
+  final String wireName = 'GnetworkDetailsData_indexers';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GNetworkDetailsData_indexers object,
+      Serializers serializers, GnetworkDetailsData_indexers object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[
       '__typename',
@@ -106,7 +106,7 @@ class _$GNetworkDetailsData_indexersSerializer
       'allocations',
       serializers.serialize(object.allocations,
           specifiedType: const FullType(BuiltList, const [
-            const FullType(GNetworkDetailsData_indexers_allocations)
+            const FullType(GnetworkDetailsData_indexers_allocations)
           ])),
     ];
     Object? value;
@@ -117,14 +117,21 @@ class _$GNetworkDetailsData_indexersSerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.defaultDisplayName;
+    if (value != null) {
+      result
+        ..add('defaultDisplayName')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
   @override
-  GNetworkDetailsData_indexers deserialize(
+  GnetworkDetailsData_indexers deserialize(
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new GNetworkDetailsData_indexersBuilder();
+    final result = new GnetworkDetailsData_indexersBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -152,6 +159,10 @@ class _$GNetworkDetailsData_indexersSerializer
           result.allocatedTokens.replace(serializers.deserialize(value,
               specifiedType: const FullType(_i2.GBigInt))! as _i2.GBigInt);
           break;
+        case 'defaultDisplayName':
+          result.defaultDisplayName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
         case 'delegatedTokens':
           result.delegatedTokens.replace(serializers.deserialize(value,
               specifiedType: const FullType(_i2.GBigInt))! as _i2.GBigInt);
@@ -159,7 +170,7 @@ class _$GNetworkDetailsData_indexersSerializer
         case 'allocations':
           result.allocations.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GNetworkDetailsData_indexers_allocations)
+                const FullType(GnetworkDetailsData_indexers_allocations)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -169,19 +180,19 @@ class _$GNetworkDetailsData_indexersSerializer
   }
 }
 
-class _$GNetworkDetailsData_indexers_allocationsSerializer
-    implements StructuredSerializer<GNetworkDetailsData_indexers_allocations> {
+class _$GnetworkDetailsData_indexers_allocationsSerializer
+    implements StructuredSerializer<GnetworkDetailsData_indexers_allocations> {
   @override
   final Iterable<Type> types = const [
-    GNetworkDetailsData_indexers_allocations,
-    _$GNetworkDetailsData_indexers_allocations
+    GnetworkDetailsData_indexers_allocations,
+    _$GnetworkDetailsData_indexers_allocations
   ];
   @override
-  final String wireName = 'GNetworkDetailsData_indexers_allocations';
+  final String wireName = 'GnetworkDetailsData_indexers_allocations';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GNetworkDetailsData_indexers_allocations object,
+      Serializers serializers, GnetworkDetailsData_indexers_allocations object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[
       '__typename',
@@ -204,7 +215,7 @@ class _$GNetworkDetailsData_indexers_allocationsSerializer
       'subgraphDeployment',
       serializers.serialize(object.subgraphDeployment,
           specifiedType: const FullType(
-              GNetworkDetailsData_indexers_allocations_subgraphDeployment)),
+              GnetworkDetailsData_indexers_allocations_subgraphDeployment)),
       'createdAtEpoch',
       serializers.serialize(object.createdAtEpoch,
           specifiedType: const FullType(int)),
@@ -217,10 +228,10 @@ class _$GNetworkDetailsData_indexers_allocationsSerializer
   }
 
   @override
-  GNetworkDetailsData_indexers_allocations deserialize(
+  GnetworkDetailsData_indexers_allocations deserialize(
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new GNetworkDetailsData_indexers_allocationsBuilder();
+    final result = new GnetworkDetailsData_indexers_allocationsBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -256,8 +267,8 @@ class _$GNetworkDetailsData_indexers_allocationsSerializer
         case 'subgraphDeployment':
           result.subgraphDeployment.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      GNetworkDetailsData_indexers_allocations_subgraphDeployment))!
-              as GNetworkDetailsData_indexers_allocations_subgraphDeployment);
+                      GnetworkDetailsData_indexers_allocations_subgraphDeployment))!
+              as GnetworkDetailsData_indexers_allocations_subgraphDeployment);
           break;
         case 'createdAtEpoch':
           result.createdAtEpoch = serializers.deserialize(value,
@@ -274,22 +285,22 @@ class _$GNetworkDetailsData_indexers_allocationsSerializer
   }
 }
 
-class _$GNetworkDetailsData_indexers_allocations_subgraphDeploymentSerializer
+class _$GnetworkDetailsData_indexers_allocations_subgraphDeploymentSerializer
     implements
         StructuredSerializer<
-            GNetworkDetailsData_indexers_allocations_subgraphDeployment> {
+            GnetworkDetailsData_indexers_allocations_subgraphDeployment> {
   @override
   final Iterable<Type> types = const [
-    GNetworkDetailsData_indexers_allocations_subgraphDeployment,
-    _$GNetworkDetailsData_indexers_allocations_subgraphDeployment
+    GnetworkDetailsData_indexers_allocations_subgraphDeployment,
+    _$GnetworkDetailsData_indexers_allocations_subgraphDeployment
   ];
   @override
   final String wireName =
-      'GNetworkDetailsData_indexers_allocations_subgraphDeployment';
+      'GnetworkDetailsData_indexers_allocations_subgraphDeployment';
 
   @override
   Iterable<Object?> serialize(Serializers serializers,
-      GNetworkDetailsData_indexers_allocations_subgraphDeployment object,
+      GnetworkDetailsData_indexers_allocations_subgraphDeployment object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[
       '__typename',
@@ -319,11 +330,11 @@ class _$GNetworkDetailsData_indexers_allocations_subgraphDeploymentSerializer
   }
 
   @override
-  GNetworkDetailsData_indexers_allocations_subgraphDeployment deserialize(
+  GnetworkDetailsData_indexers_allocations_subgraphDeployment deserialize(
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     final result =
-        new GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder();
+        new GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -362,37 +373,37 @@ class _$GNetworkDetailsData_indexers_allocations_subgraphDeploymentSerializer
   }
 }
 
-class _$GNetworkDetailsData extends GNetworkDetailsData {
+class _$GnetworkDetailsData extends GnetworkDetailsData {
   @override
   final String G__typename;
   @override
-  final BuiltList<GNetworkDetailsData_indexers> indexers;
+  final BuiltList<GnetworkDetailsData_indexers> indexers;
 
-  factory _$GNetworkDetailsData(
-          [void Function(GNetworkDetailsDataBuilder)? updates]) =>
-      (new GNetworkDetailsDataBuilder()..update(updates))._build();
+  factory _$GnetworkDetailsData(
+          [void Function(GnetworkDetailsDataBuilder)? updates]) =>
+      (new GnetworkDetailsDataBuilder()..update(updates))._build();
 
-  _$GNetworkDetailsData._({required this.G__typename, required this.indexers})
+  _$GnetworkDetailsData._({required this.G__typename, required this.indexers})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GNetworkDetailsData', 'G__typename');
+        G__typename, r'GnetworkDetailsData', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        indexers, r'GNetworkDetailsData', 'indexers');
+        indexers, r'GnetworkDetailsData', 'indexers');
   }
 
   @override
-  GNetworkDetailsData rebuild(
-          void Function(GNetworkDetailsDataBuilder) updates) =>
+  GnetworkDetailsData rebuild(
+          void Function(GnetworkDetailsDataBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GNetworkDetailsDataBuilder toBuilder() =>
-      new GNetworkDetailsDataBuilder()..replace(this);
+  GnetworkDetailsDataBuilder toBuilder() =>
+      new GnetworkDetailsDataBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GNetworkDetailsData &&
+    return other is GnetworkDetailsData &&
         G__typename == other.G__typename &&
         indexers == other.indexers;
   }
@@ -404,32 +415,32 @@ class _$GNetworkDetailsData extends GNetworkDetailsData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GNetworkDetailsData')
+    return (newBuiltValueToStringHelper(r'GnetworkDetailsData')
           ..add('G__typename', G__typename)
           ..add('indexers', indexers))
         .toString();
   }
 }
 
-class GNetworkDetailsDataBuilder
-    implements Builder<GNetworkDetailsData, GNetworkDetailsDataBuilder> {
-  _$GNetworkDetailsData? _$v;
+class GnetworkDetailsDataBuilder
+    implements Builder<GnetworkDetailsData, GnetworkDetailsDataBuilder> {
+  _$GnetworkDetailsData? _$v;
 
   String? _G__typename;
   String? get G__typename => _$this._G__typename;
   set G__typename(String? G__typename) => _$this._G__typename = G__typename;
 
-  ListBuilder<GNetworkDetailsData_indexers>? _indexers;
-  ListBuilder<GNetworkDetailsData_indexers> get indexers =>
-      _$this._indexers ??= new ListBuilder<GNetworkDetailsData_indexers>();
-  set indexers(ListBuilder<GNetworkDetailsData_indexers>? indexers) =>
+  ListBuilder<GnetworkDetailsData_indexers>? _indexers;
+  ListBuilder<GnetworkDetailsData_indexers> get indexers =>
+      _$this._indexers ??= new ListBuilder<GnetworkDetailsData_indexers>();
+  set indexers(ListBuilder<GnetworkDetailsData_indexers>? indexers) =>
       _$this._indexers = indexers;
 
-  GNetworkDetailsDataBuilder() {
-    GNetworkDetailsData._initializeBuilder(this);
+  GnetworkDetailsDataBuilder() {
+    GnetworkDetailsData._initializeBuilder(this);
   }
 
-  GNetworkDetailsDataBuilder get _$this {
+  GnetworkDetailsDataBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _G__typename = $v.G__typename;
@@ -440,26 +451,26 @@ class GNetworkDetailsDataBuilder
   }
 
   @override
-  void replace(GNetworkDetailsData other) {
+  void replace(GnetworkDetailsData other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GNetworkDetailsData;
+    _$v = other as _$GnetworkDetailsData;
   }
 
   @override
-  void update(void Function(GNetworkDetailsDataBuilder)? updates) {
+  void update(void Function(GnetworkDetailsDataBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GNetworkDetailsData build() => _build();
+  GnetworkDetailsData build() => _build();
 
-  _$GNetworkDetailsData _build() {
-    _$GNetworkDetailsData _$result;
+  _$GnetworkDetailsData _build() {
+    _$GnetworkDetailsData _$result;
     try {
       _$result = _$v ??
-          new _$GNetworkDetailsData._(
+          new _$GnetworkDetailsData._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, r'GNetworkDetailsData', 'G__typename'),
+                  G__typename, r'GnetworkDetailsData', 'G__typename'),
               indexers: indexers.build());
     } catch (_) {
       late String _$failedField;
@@ -468,7 +479,7 @@ class GNetworkDetailsDataBuilder
         indexers.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'GNetworkDetailsData', _$failedField, e.toString());
+            r'GnetworkDetailsData', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -477,7 +488,7 @@ class GNetworkDetailsDataBuilder
   }
 }
 
-class _$GNetworkDetailsData_indexers extends GNetworkDetailsData_indexers {
+class _$GnetworkDetailsData_indexers extends GnetworkDetailsData_indexers {
   @override
   final String G__typename;
   @override
@@ -489,55 +500,59 @@ class _$GNetworkDetailsData_indexers extends GNetworkDetailsData_indexers {
   @override
   final _i2.GBigInt allocatedTokens;
   @override
+  final String? defaultDisplayName;
+  @override
   final _i2.GBigInt delegatedTokens;
   @override
-  final BuiltList<GNetworkDetailsData_indexers_allocations> allocations;
+  final BuiltList<GnetworkDetailsData_indexers_allocations> allocations;
 
-  factory _$GNetworkDetailsData_indexers(
-          [void Function(GNetworkDetailsData_indexersBuilder)? updates]) =>
-      (new GNetworkDetailsData_indexersBuilder()..update(updates))._build();
+  factory _$GnetworkDetailsData_indexers(
+          [void Function(GnetworkDetailsData_indexersBuilder)? updates]) =>
+      (new GnetworkDetailsData_indexersBuilder()..update(updates))._build();
 
-  _$GNetworkDetailsData_indexers._(
+  _$GnetworkDetailsData_indexers._(
       {required this.G__typename,
       required this.id,
       this.url,
       required this.stakedTokens,
       required this.allocatedTokens,
+      this.defaultDisplayName,
       required this.delegatedTokens,
       required this.allocations})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GNetworkDetailsData_indexers', 'G__typename');
+        G__typename, r'GnetworkDetailsData_indexers', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(
-        id, r'GNetworkDetailsData_indexers', 'id');
+        id, r'GnetworkDetailsData_indexers', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        stakedTokens, r'GNetworkDetailsData_indexers', 'stakedTokens');
+        stakedTokens, r'GnetworkDetailsData_indexers', 'stakedTokens');
     BuiltValueNullFieldError.checkNotNull(
-        allocatedTokens, r'GNetworkDetailsData_indexers', 'allocatedTokens');
+        allocatedTokens, r'GnetworkDetailsData_indexers', 'allocatedTokens');
     BuiltValueNullFieldError.checkNotNull(
-        delegatedTokens, r'GNetworkDetailsData_indexers', 'delegatedTokens');
+        delegatedTokens, r'GnetworkDetailsData_indexers', 'delegatedTokens');
     BuiltValueNullFieldError.checkNotNull(
-        allocations, r'GNetworkDetailsData_indexers', 'allocations');
+        allocations, r'GnetworkDetailsData_indexers', 'allocations');
   }
 
   @override
-  GNetworkDetailsData_indexers rebuild(
-          void Function(GNetworkDetailsData_indexersBuilder) updates) =>
+  GnetworkDetailsData_indexers rebuild(
+          void Function(GnetworkDetailsData_indexersBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GNetworkDetailsData_indexersBuilder toBuilder() =>
-      new GNetworkDetailsData_indexersBuilder()..replace(this);
+  GnetworkDetailsData_indexersBuilder toBuilder() =>
+      new GnetworkDetailsData_indexersBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GNetworkDetailsData_indexers &&
+    return other is GnetworkDetailsData_indexers &&
         G__typename == other.G__typename &&
         id == other.id &&
         url == other.url &&
         stakedTokens == other.stakedTokens &&
         allocatedTokens == other.allocatedTokens &&
+        defaultDisplayName == other.defaultDisplayName &&
         delegatedTokens == other.delegatedTokens &&
         allocations == other.allocations;
   }
@@ -548,33 +563,36 @@ class _$GNetworkDetailsData_indexers extends GNetworkDetailsData_indexers {
         $jc(
             $jc(
                 $jc(
-                    $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
-                        url.hashCode),
-                    stakedTokens.hashCode),
-                allocatedTokens.hashCode),
+                    $jc(
+                        $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
+                            url.hashCode),
+                        stakedTokens.hashCode),
+                    allocatedTokens.hashCode),
+                defaultDisplayName.hashCode),
             delegatedTokens.hashCode),
         allocations.hashCode));
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GNetworkDetailsData_indexers')
+    return (newBuiltValueToStringHelper(r'GnetworkDetailsData_indexers')
           ..add('G__typename', G__typename)
           ..add('id', id)
           ..add('url', url)
           ..add('stakedTokens', stakedTokens)
           ..add('allocatedTokens', allocatedTokens)
+          ..add('defaultDisplayName', defaultDisplayName)
           ..add('delegatedTokens', delegatedTokens)
           ..add('allocations', allocations))
         .toString();
   }
 }
 
-class GNetworkDetailsData_indexersBuilder
+class GnetworkDetailsData_indexersBuilder
     implements
-        Builder<GNetworkDetailsData_indexers,
-            GNetworkDetailsData_indexersBuilder> {
-  _$GNetworkDetailsData_indexers? _$v;
+        Builder<GnetworkDetailsData_indexers,
+            GnetworkDetailsData_indexersBuilder> {
+  _$GnetworkDetailsData_indexers? _$v;
 
   String? _G__typename;
   String? get G__typename => _$this._G__typename;
@@ -600,25 +618,30 @@ class GNetworkDetailsData_indexersBuilder
   set allocatedTokens(_i2.GBigIntBuilder? allocatedTokens) =>
       _$this._allocatedTokens = allocatedTokens;
 
+  String? _defaultDisplayName;
+  String? get defaultDisplayName => _$this._defaultDisplayName;
+  set defaultDisplayName(String? defaultDisplayName) =>
+      _$this._defaultDisplayName = defaultDisplayName;
+
   _i2.GBigIntBuilder? _delegatedTokens;
   _i2.GBigIntBuilder get delegatedTokens =>
       _$this._delegatedTokens ??= new _i2.GBigIntBuilder();
   set delegatedTokens(_i2.GBigIntBuilder? delegatedTokens) =>
       _$this._delegatedTokens = delegatedTokens;
 
-  ListBuilder<GNetworkDetailsData_indexers_allocations>? _allocations;
-  ListBuilder<GNetworkDetailsData_indexers_allocations> get allocations =>
+  ListBuilder<GnetworkDetailsData_indexers_allocations>? _allocations;
+  ListBuilder<GnetworkDetailsData_indexers_allocations> get allocations =>
       _$this._allocations ??=
-          new ListBuilder<GNetworkDetailsData_indexers_allocations>();
+          new ListBuilder<GnetworkDetailsData_indexers_allocations>();
   set allocations(
-          ListBuilder<GNetworkDetailsData_indexers_allocations>? allocations) =>
+          ListBuilder<GnetworkDetailsData_indexers_allocations>? allocations) =>
       _$this._allocations = allocations;
 
-  GNetworkDetailsData_indexersBuilder() {
-    GNetworkDetailsData_indexers._initializeBuilder(this);
+  GnetworkDetailsData_indexersBuilder() {
+    GnetworkDetailsData_indexers._initializeBuilder(this);
   }
 
-  GNetworkDetailsData_indexersBuilder get _$this {
+  GnetworkDetailsData_indexersBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _G__typename = $v.G__typename;
@@ -626,6 +649,7 @@ class GNetworkDetailsData_indexersBuilder
       _url = $v.url;
       _stakedTokens = $v.stakedTokens.toBuilder();
       _allocatedTokens = $v.allocatedTokens.toBuilder();
+      _defaultDisplayName = $v.defaultDisplayName;
       _delegatedTokens = $v.delegatedTokens.toBuilder();
       _allocations = $v.allocations.toBuilder();
       _$v = null;
@@ -634,31 +658,32 @@ class GNetworkDetailsData_indexersBuilder
   }
 
   @override
-  void replace(GNetworkDetailsData_indexers other) {
+  void replace(GnetworkDetailsData_indexers other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GNetworkDetailsData_indexers;
+    _$v = other as _$GnetworkDetailsData_indexers;
   }
 
   @override
-  void update(void Function(GNetworkDetailsData_indexersBuilder)? updates) {
+  void update(void Function(GnetworkDetailsData_indexersBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GNetworkDetailsData_indexers build() => _build();
+  GnetworkDetailsData_indexers build() => _build();
 
-  _$GNetworkDetailsData_indexers _build() {
-    _$GNetworkDetailsData_indexers _$result;
+  _$GnetworkDetailsData_indexers _build() {
+    _$GnetworkDetailsData_indexers _$result;
     try {
       _$result = _$v ??
-          new _$GNetworkDetailsData_indexers._(
+          new _$GnetworkDetailsData_indexers._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, r'GNetworkDetailsData_indexers', 'G__typename'),
+                  G__typename, r'GnetworkDetailsData_indexers', 'G__typename'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'GNetworkDetailsData_indexers', 'id'),
+                  id, r'GnetworkDetailsData_indexers', 'id'),
               url: url,
               stakedTokens: stakedTokens.build(),
               allocatedTokens: allocatedTokens.build(),
+              defaultDisplayName: defaultDisplayName,
               delegatedTokens: delegatedTokens.build(),
               allocations: allocations.build());
     } catch (_) {
@@ -668,13 +693,14 @@ class GNetworkDetailsData_indexersBuilder
         stakedTokens.build();
         _$failedField = 'allocatedTokens';
         allocatedTokens.build();
+
         _$failedField = 'delegatedTokens';
         delegatedTokens.build();
         _$failedField = 'allocations';
         allocations.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'GNetworkDetailsData_indexers', _$failedField, e.toString());
+            r'GnetworkDetailsData_indexers', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -683,8 +709,8 @@ class GNetworkDetailsData_indexersBuilder
   }
 }
 
-class _$GNetworkDetailsData_indexers_allocations
-    extends GNetworkDetailsData_indexers_allocations {
+class _$GnetworkDetailsData_indexers_allocations
+    extends GnetworkDetailsData_indexers_allocations {
   @override
   final String G__typename;
   @override
@@ -698,20 +724,20 @@ class _$GNetworkDetailsData_indexers_allocations
   @override
   final int createdAt;
   @override
-  final GNetworkDetailsData_indexers_allocations_subgraphDeployment
+  final GnetworkDetailsData_indexers_allocations_subgraphDeployment
       subgraphDeployment;
   @override
   final int createdAtEpoch;
   @override
   final int createdAtBlockNumber;
 
-  factory _$GNetworkDetailsData_indexers_allocations(
-          [void Function(GNetworkDetailsData_indexers_allocationsBuilder)?
+  factory _$GnetworkDetailsData_indexers_allocations(
+          [void Function(GnetworkDetailsData_indexers_allocationsBuilder)?
               updates]) =>
-      (new GNetworkDetailsData_indexers_allocationsBuilder()..update(updates))
+      (new GnetworkDetailsData_indexers_allocationsBuilder()..update(updates))
           ._build();
 
-  _$GNetworkDetailsData_indexers_allocations._(
+  _$GnetworkDetailsData_indexers_allocations._(
       {required this.G__typename,
       required this.indexingRewards,
       required this.allocatedTokens,
@@ -723,39 +749,39 @@ class _$GNetworkDetailsData_indexers_allocations
       required this.createdAtBlockNumber})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GNetworkDetailsData_indexers_allocations', 'G__typename');
+        r'GnetworkDetailsData_indexers_allocations', 'G__typename');
     BuiltValueNullFieldError.checkNotNull(indexingRewards,
-        r'GNetworkDetailsData_indexers_allocations', 'indexingRewards');
+        r'GnetworkDetailsData_indexers_allocations', 'indexingRewards');
     BuiltValueNullFieldError.checkNotNull(allocatedTokens,
-        r'GNetworkDetailsData_indexers_allocations', 'allocatedTokens');
+        r'GnetworkDetailsData_indexers_allocations', 'allocatedTokens');
     BuiltValueNullFieldError.checkNotNull(
-        status, r'GNetworkDetailsData_indexers_allocations', 'status');
+        status, r'GnetworkDetailsData_indexers_allocations', 'status');
     BuiltValueNullFieldError.checkNotNull(
-        id, r'GNetworkDetailsData_indexers_allocations', 'id');
+        id, r'GnetworkDetailsData_indexers_allocations', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'GNetworkDetailsData_indexers_allocations', 'createdAt');
+        createdAt, r'GnetworkDetailsData_indexers_allocations', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(subgraphDeployment,
-        r'GNetworkDetailsData_indexers_allocations', 'subgraphDeployment');
+        r'GnetworkDetailsData_indexers_allocations', 'subgraphDeployment');
     BuiltValueNullFieldError.checkNotNull(createdAtEpoch,
-        r'GNetworkDetailsData_indexers_allocations', 'createdAtEpoch');
+        r'GnetworkDetailsData_indexers_allocations', 'createdAtEpoch');
     BuiltValueNullFieldError.checkNotNull(createdAtBlockNumber,
-        r'GNetworkDetailsData_indexers_allocations', 'createdAtBlockNumber');
+        r'GnetworkDetailsData_indexers_allocations', 'createdAtBlockNumber');
   }
 
   @override
-  GNetworkDetailsData_indexers_allocations rebuild(
-          void Function(GNetworkDetailsData_indexers_allocationsBuilder)
+  GnetworkDetailsData_indexers_allocations rebuild(
+          void Function(GnetworkDetailsData_indexers_allocationsBuilder)
               updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GNetworkDetailsData_indexers_allocationsBuilder toBuilder() =>
-      new GNetworkDetailsData_indexers_allocationsBuilder()..replace(this);
+  GnetworkDetailsData_indexers_allocationsBuilder toBuilder() =>
+      new GnetworkDetailsData_indexers_allocationsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GNetworkDetailsData_indexers_allocations &&
+    return other is GnetworkDetailsData_indexers_allocations &&
         G__typename == other.G__typename &&
         indexingRewards == other.indexingRewards &&
         allocatedTokens == other.allocatedTokens &&
@@ -790,7 +816,7 @@ class _$GNetworkDetailsData_indexers_allocations
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            r'GNetworkDetailsData_indexers_allocations')
+            r'GnetworkDetailsData_indexers_allocations')
           ..add('G__typename', G__typename)
           ..add('indexingRewards', indexingRewards)
           ..add('allocatedTokens', allocatedTokens)
@@ -804,11 +830,11 @@ class _$GNetworkDetailsData_indexers_allocations
   }
 }
 
-class GNetworkDetailsData_indexers_allocationsBuilder
+class GnetworkDetailsData_indexers_allocationsBuilder
     implements
-        Builder<GNetworkDetailsData_indexers_allocations,
-            GNetworkDetailsData_indexers_allocationsBuilder> {
-  _$GNetworkDetailsData_indexers_allocations? _$v;
+        Builder<GnetworkDetailsData_indexers_allocations,
+            GnetworkDetailsData_indexers_allocationsBuilder> {
+  _$GnetworkDetailsData_indexers_allocations? _$v;
 
   String? _G__typename;
   String? get G__typename => _$this._G__typename;
@@ -838,13 +864,13 @@ class GNetworkDetailsData_indexers_allocationsBuilder
   int? get createdAt => _$this._createdAt;
   set createdAt(int? createdAt) => _$this._createdAt = createdAt;
 
-  GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder?
+  GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder?
       _subgraphDeployment;
-  GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder
+  GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder
       get subgraphDeployment => _$this._subgraphDeployment ??=
-          new GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder();
+          new GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder();
   set subgraphDeployment(
-          GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder?
+          GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder?
               subgraphDeployment) =>
       _$this._subgraphDeployment = subgraphDeployment;
 
@@ -858,11 +884,11 @@ class GNetworkDetailsData_indexers_allocationsBuilder
   set createdAtBlockNumber(int? createdAtBlockNumber) =>
       _$this._createdAtBlockNumber = createdAtBlockNumber;
 
-  GNetworkDetailsData_indexers_allocationsBuilder() {
-    GNetworkDetailsData_indexers_allocations._initializeBuilder(this);
+  GnetworkDetailsData_indexers_allocationsBuilder() {
+    GnetworkDetailsData_indexers_allocations._initializeBuilder(this);
   }
 
-  GNetworkDetailsData_indexers_allocationsBuilder get _$this {
+  GnetworkDetailsData_indexers_allocationsBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _G__typename = $v.G__typename;
@@ -880,43 +906,43 @@ class GNetworkDetailsData_indexers_allocationsBuilder
   }
 
   @override
-  void replace(GNetworkDetailsData_indexers_allocations other) {
+  void replace(GnetworkDetailsData_indexers_allocations other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GNetworkDetailsData_indexers_allocations;
+    _$v = other as _$GnetworkDetailsData_indexers_allocations;
   }
 
   @override
   void update(
-      void Function(GNetworkDetailsData_indexers_allocationsBuilder)? updates) {
+      void Function(GnetworkDetailsData_indexers_allocationsBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GNetworkDetailsData_indexers_allocations build() => _build();
+  GnetworkDetailsData_indexers_allocations build() => _build();
 
-  _$GNetworkDetailsData_indexers_allocations _build() {
-    _$GNetworkDetailsData_indexers_allocations _$result;
+  _$GnetworkDetailsData_indexers_allocations _build() {
+    _$GnetworkDetailsData_indexers_allocations _$result;
     try {
       _$result = _$v ??
-          new _$GNetworkDetailsData_indexers_allocations._(
+          new _$GnetworkDetailsData_indexers_allocations._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, r'GNetworkDetailsData_indexers_allocations', 'G__typename'),
+                  G__typename, r'GnetworkDetailsData_indexers_allocations', 'G__typename'),
               indexingRewards: indexingRewards.build(),
               allocatedTokens: allocatedTokens.build(),
               status: BuiltValueNullFieldError.checkNotNull(
-                  status, r'GNetworkDetailsData_indexers_allocations', 'status'),
+                  status, r'GnetworkDetailsData_indexers_allocations', 'status'),
               id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'GNetworkDetailsData_indexers_allocations', 'id'),
+                  id, r'GnetworkDetailsData_indexers_allocations', 'id'),
               createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'GNetworkDetailsData_indexers_allocations', 'createdAt'),
+                  createdAt, r'GnetworkDetailsData_indexers_allocations', 'createdAt'),
               subgraphDeployment: subgraphDeployment.build(),
               createdAtEpoch: BuiltValueNullFieldError.checkNotNull(
                   createdAtEpoch,
-                  r'GNetworkDetailsData_indexers_allocations',
+                  r'GnetworkDetailsData_indexers_allocations',
                   'createdAtEpoch'),
               createdAtBlockNumber: BuiltValueNullFieldError.checkNotNull(
                   createdAtBlockNumber,
-                  r'GNetworkDetailsData_indexers_allocations',
+                  r'GnetworkDetailsData_indexers_allocations',
                   'createdAtBlockNumber'));
     } catch (_) {
       late String _$failedField;
@@ -930,7 +956,7 @@ class GNetworkDetailsData_indexers_allocationsBuilder
         subgraphDeployment.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'GNetworkDetailsData_indexers_allocations',
+            r'GnetworkDetailsData_indexers_allocations',
             _$failedField,
             e.toString());
       }
@@ -941,8 +967,8 @@ class GNetworkDetailsData_indexers_allocationsBuilder
   }
 }
 
-class _$GNetworkDetailsData_indexers_allocations_subgraphDeployment
-    extends GNetworkDetailsData_indexers_allocations_subgraphDeployment {
+class _$GnetworkDetailsData_indexers_allocations_subgraphDeployment
+    extends GnetworkDetailsData_indexers_allocations_subgraphDeployment {
   @override
   final String G__typename;
   @override
@@ -956,15 +982,15 @@ class _$GNetworkDetailsData_indexers_allocations_subgraphDeployment
   @override
   final String id;
 
-  factory _$GNetworkDetailsData_indexers_allocations_subgraphDeployment(
+  factory _$GnetworkDetailsData_indexers_allocations_subgraphDeployment(
           [void Function(
-                  GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder)?
+                  GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder)?
               updates]) =>
-      (new GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder()
+      (new GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder()
             ..update(updates))
           ._build();
 
-  _$GNetworkDetailsData_indexers_allocations_subgraphDeployment._(
+  _$GnetworkDetailsData_indexers_allocations_subgraphDeployment._(
       {required this.G__typename,
       required this.signalledTokens,
       required this.createdAt,
@@ -974,42 +1000,42 @@ class _$GNetworkDetailsData_indexers_allocations_subgraphDeployment
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         G__typename,
-        r'GNetworkDetailsData_indexers_allocations_subgraphDeployment',
+        r'GnetworkDetailsData_indexers_allocations_subgraphDeployment',
         'G__typename');
     BuiltValueNullFieldError.checkNotNull(
         signalledTokens,
-        r'GNetworkDetailsData_indexers_allocations_subgraphDeployment',
+        r'GnetworkDetailsData_indexers_allocations_subgraphDeployment',
         'signalledTokens');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
-        r'GNetworkDetailsData_indexers_allocations_subgraphDeployment',
+        r'GnetworkDetailsData_indexers_allocations_subgraphDeployment',
         'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         stakedTokens,
-        r'GNetworkDetailsData_indexers_allocations_subgraphDeployment',
+        r'GnetworkDetailsData_indexers_allocations_subgraphDeployment',
         'stakedTokens');
     BuiltValueNullFieldError.checkNotNull(id,
-        r'GNetworkDetailsData_indexers_allocations_subgraphDeployment', 'id');
+        r'GnetworkDetailsData_indexers_allocations_subgraphDeployment', 'id');
   }
 
   @override
-  GNetworkDetailsData_indexers_allocations_subgraphDeployment rebuild(
+  GnetworkDetailsData_indexers_allocations_subgraphDeployment rebuild(
           void Function(
-                  GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder)
+                  GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder)
               updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder
+  GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder
       toBuilder() =>
-          new GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder()
+          new GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder()
             ..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other
-            is GNetworkDetailsData_indexers_allocations_subgraphDeployment &&
+            is GnetworkDetailsData_indexers_allocations_subgraphDeployment &&
         G__typename == other.G__typename &&
         signalledTokens == other.signalledTokens &&
         createdAt == other.createdAt &&
@@ -1033,7 +1059,7 @@ class _$GNetworkDetailsData_indexers_allocations_subgraphDeployment
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            r'GNetworkDetailsData_indexers_allocations_subgraphDeployment')
+            r'GnetworkDetailsData_indexers_allocations_subgraphDeployment')
           ..add('G__typename', G__typename)
           ..add('signalledTokens', signalledTokens)
           ..add('createdAt', createdAt)
@@ -1044,11 +1070,11 @@ class _$GNetworkDetailsData_indexers_allocations_subgraphDeployment
   }
 }
 
-class GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder
+class GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder
     implements
-        Builder<GNetworkDetailsData_indexers_allocations_subgraphDeployment,
-            GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder> {
-  _$GNetworkDetailsData_indexers_allocations_subgraphDeployment? _$v;
+        Builder<GnetworkDetailsData_indexers_allocations_subgraphDeployment,
+            GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder> {
+  _$GnetworkDetailsData_indexers_allocations_subgraphDeployment? _$v;
 
   String? _G__typename;
   String? get G__typename => _$this._G__typename;
@@ -1078,12 +1104,12 @@ class GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
-  GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder() {
-    GNetworkDetailsData_indexers_allocations_subgraphDeployment
+  GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder() {
+    GnetworkDetailsData_indexers_allocations_subgraphDeployment
         ._initializeBuilder(this);
   }
 
-  GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder
+  GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder
       get _$this {
     final $v = _$v;
     if ($v != null) {
@@ -1100,43 +1126,43 @@ class GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder
 
   @override
   void replace(
-      GNetworkDetailsData_indexers_allocations_subgraphDeployment other) {
+      GnetworkDetailsData_indexers_allocations_subgraphDeployment other) {
     ArgumentError.checkNotNull(other, 'other');
     _$v =
-        other as _$GNetworkDetailsData_indexers_allocations_subgraphDeployment;
+        other as _$GnetworkDetailsData_indexers_allocations_subgraphDeployment;
   }
 
   @override
   void update(
       void Function(
-              GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder)?
+              GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder)?
           updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GNetworkDetailsData_indexers_allocations_subgraphDeployment build() =>
+  GnetworkDetailsData_indexers_allocations_subgraphDeployment build() =>
       _build();
 
-  _$GNetworkDetailsData_indexers_allocations_subgraphDeployment _build() {
-    _$GNetworkDetailsData_indexers_allocations_subgraphDeployment _$result;
+  _$GnetworkDetailsData_indexers_allocations_subgraphDeployment _build() {
+    _$GnetworkDetailsData_indexers_allocations_subgraphDeployment _$result;
     try {
       _$result = _$v ??
-          new _$GNetworkDetailsData_indexers_allocations_subgraphDeployment._(
+          new _$GnetworkDetailsData_indexers_allocations_subgraphDeployment._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
-                  r'GNetworkDetailsData_indexers_allocations_subgraphDeployment',
+                  r'GnetworkDetailsData_indexers_allocations_subgraphDeployment',
                   'G__typename'),
               signalledTokens: signalledTokens.build(),
               createdAt: BuiltValueNullFieldError.checkNotNull(
                   createdAt,
-                  r'GNetworkDetailsData_indexers_allocations_subgraphDeployment',
+                  r'GnetworkDetailsData_indexers_allocations_subgraphDeployment',
                   'createdAt'),
               stakedTokens: stakedTokens.build(),
               originalName: originalName,
               id: BuiltValueNullFieldError.checkNotNull(
                   id,
-                  r'GNetworkDetailsData_indexers_allocations_subgraphDeployment',
+                  r'GnetworkDetailsData_indexers_allocations_subgraphDeployment',
                   'id'));
     } catch (_) {
       late String _$failedField;
@@ -1148,7 +1174,7 @@ class GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder
         stakedTokens.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'GNetworkDetailsData_indexers_allocations_subgraphDeployment',
+            r'GnetworkDetailsData_indexers_allocations_subgraphDeployment',
             _$failedField,
             e.toString());
       }

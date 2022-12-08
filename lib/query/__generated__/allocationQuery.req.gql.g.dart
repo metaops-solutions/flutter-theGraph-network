@@ -6,24 +6,24 @@ part of 'allocationQuery.req.gql.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-Serializer<GNetworkDetailsReq> _$gNetworkDetailsReqSerializer =
-    new _$GNetworkDetailsReqSerializer();
+Serializer<GnetworkDetailsReq> _$gnetworkDetailsReqSerializer =
+    new _$GnetworkDetailsReqSerializer();
 
-class _$GNetworkDetailsReqSerializer
-    implements StructuredSerializer<GNetworkDetailsReq> {
+class _$GnetworkDetailsReqSerializer
+    implements StructuredSerializer<GnetworkDetailsReq> {
   @override
-  final Iterable<Type> types = const [GNetworkDetailsReq, _$GNetworkDetailsReq];
+  final Iterable<Type> types = const [GnetworkDetailsReq, _$GnetworkDetailsReq];
   @override
-  final String wireName = 'GNetworkDetailsReq';
+  final String wireName = 'GnetworkDetailsReq';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GNetworkDetailsReq object,
+      Serializers serializers, GnetworkDetailsReq object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[
       'vars',
       serializers.serialize(object.vars,
-          specifiedType: const FullType(_i3.GNetworkDetailsVars)),
+          specifiedType: const FullType(_i3.GnetworkDetailsVars)),
       'operation',
       serializers.serialize(object.operation,
           specifiedType: const FullType(_i4.Operation)),
@@ -44,7 +44,7 @@ class _$GNetworkDetailsReqSerializer
       result
         ..add('optimisticResponse')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(_i2.GNetworkDetailsData)));
+            specifiedType: const FullType(_i2.GnetworkDetailsData)));
     }
     value = object.updateCacheHandlerKey;
     if (value != null) {
@@ -72,10 +72,10 @@ class _$GNetworkDetailsReqSerializer
   }
 
   @override
-  GNetworkDetailsReq deserialize(
+  GnetworkDetailsReq deserialize(
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new GNetworkDetailsReqBuilder();
+    final result = new GnetworkDetailsReqBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -85,8 +85,8 @@ class _$GNetworkDetailsReqSerializer
       switch (key) {
         case 'vars':
           result.vars.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(_i3.GNetworkDetailsVars))!
-              as _i3.GNetworkDetailsVars);
+                  specifiedType: const FullType(_i3.GnetworkDetailsVars))!
+              as _i3.GnetworkDetailsVars);
           break;
         case 'operation':
           result.operation = serializers.deserialize(value,
@@ -98,8 +98,8 @@ class _$GNetworkDetailsReqSerializer
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(_i2.GNetworkDetailsData))!
-              as _i2.GNetworkDetailsData);
+                  specifiedType: const FullType(_i2.GnetworkDetailsData))!
+              as _i2.GnetworkDetailsData);
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
@@ -128,18 +128,18 @@ class _$GNetworkDetailsReqSerializer
   }
 }
 
-class _$GNetworkDetailsReq extends GNetworkDetailsReq {
+class _$GnetworkDetailsReq extends GnetworkDetailsReq {
   @override
-  final _i3.GNetworkDetailsVars vars;
+  final _i3.GnetworkDetailsVars vars;
   @override
   final _i4.Operation operation;
   @override
   final String? requestId;
   @override
-  final _i2.GNetworkDetailsData? Function(
-      _i2.GNetworkDetailsData?, _i2.GNetworkDetailsData?)? updateResult;
+  final _i2.GnetworkDetailsData? Function(
+      _i2.GnetworkDetailsData?, _i2.GnetworkDetailsData?)? updateResult;
   @override
-  final _i2.GNetworkDetailsData? optimisticResponse;
+  final _i2.GnetworkDetailsData? optimisticResponse;
   @override
   final String? updateCacheHandlerKey;
   @override
@@ -149,11 +149,11 @@ class _$GNetworkDetailsReq extends GNetworkDetailsReq {
   @override
   final bool executeOnListen;
 
-  factory _$GNetworkDetailsReq(
-          [void Function(GNetworkDetailsReqBuilder)? updates]) =>
-      (new GNetworkDetailsReqBuilder()..update(updates))._build();
+  factory _$GnetworkDetailsReq(
+          [void Function(GnetworkDetailsReqBuilder)? updates]) =>
+      (new GnetworkDetailsReqBuilder()..update(updates))._build();
 
-  _$GNetworkDetailsReq._(
+  _$GnetworkDetailsReq._(
       {required this.vars,
       required this.operation,
       this.requestId,
@@ -164,27 +164,27 @@ class _$GNetworkDetailsReq extends GNetworkDetailsReq {
       this.fetchPolicy,
       required this.executeOnListen})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(vars, r'GNetworkDetailsReq', 'vars');
+    BuiltValueNullFieldError.checkNotNull(vars, r'GnetworkDetailsReq', 'vars');
     BuiltValueNullFieldError.checkNotNull(
-        operation, r'GNetworkDetailsReq', 'operation');
+        operation, r'GnetworkDetailsReq', 'operation');
     BuiltValueNullFieldError.checkNotNull(
-        executeOnListen, r'GNetworkDetailsReq', 'executeOnListen');
+        executeOnListen, r'GnetworkDetailsReq', 'executeOnListen');
   }
 
   @override
-  GNetworkDetailsReq rebuild(
-          void Function(GNetworkDetailsReqBuilder) updates) =>
+  GnetworkDetailsReq rebuild(
+          void Function(GnetworkDetailsReqBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GNetworkDetailsReqBuilder toBuilder() =>
-      new GNetworkDetailsReqBuilder()..replace(this);
+  GnetworkDetailsReqBuilder toBuilder() =>
+      new GnetworkDetailsReqBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     final dynamic _$dynamicOther = other;
-    return other is GNetworkDetailsReq &&
+    return other is GnetworkDetailsReq &&
         vars == other.vars &&
         operation == other.operation &&
         requestId == other.requestId &&
@@ -216,7 +216,7 @@ class _$GNetworkDetailsReq extends GNetworkDetailsReq {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GNetworkDetailsReq')
+    return (newBuiltValueToStringHelper(r'GnetworkDetailsReq')
           ..add('vars', vars)
           ..add('operation', operation)
           ..add('requestId', requestId)
@@ -230,14 +230,14 @@ class _$GNetworkDetailsReq extends GNetworkDetailsReq {
   }
 }
 
-class GNetworkDetailsReqBuilder
-    implements Builder<GNetworkDetailsReq, GNetworkDetailsReqBuilder> {
-  _$GNetworkDetailsReq? _$v;
+class GnetworkDetailsReqBuilder
+    implements Builder<GnetworkDetailsReq, GnetworkDetailsReqBuilder> {
+  _$GnetworkDetailsReq? _$v;
 
-  _i3.GNetworkDetailsVarsBuilder? _vars;
-  _i3.GNetworkDetailsVarsBuilder get vars =>
-      _$this._vars ??= new _i3.GNetworkDetailsVarsBuilder();
-  set vars(_i3.GNetworkDetailsVarsBuilder? vars) => _$this._vars = vars;
+  _i3.GnetworkDetailsVarsBuilder? _vars;
+  _i3.GnetworkDetailsVarsBuilder get vars =>
+      _$this._vars ??= new _i3.GnetworkDetailsVarsBuilder();
+  set vars(_i3.GnetworkDetailsVarsBuilder? vars) => _$this._vars = vars;
 
   _i4.Operation? _operation;
   _i4.Operation? get operation => _$this._operation;
@@ -247,21 +247,21 @@ class GNetworkDetailsReqBuilder
   String? get requestId => _$this._requestId;
   set requestId(String? requestId) => _$this._requestId = requestId;
 
-  _i2.GNetworkDetailsData? Function(
-      _i2.GNetworkDetailsData?, _i2.GNetworkDetailsData?)? _updateResult;
-  _i2.GNetworkDetailsData? Function(
-          _i2.GNetworkDetailsData?, _i2.GNetworkDetailsData?)?
+  _i2.GnetworkDetailsData? Function(
+      _i2.GnetworkDetailsData?, _i2.GnetworkDetailsData?)? _updateResult;
+  _i2.GnetworkDetailsData? Function(
+          _i2.GnetworkDetailsData?, _i2.GnetworkDetailsData?)?
       get updateResult => _$this._updateResult;
   set updateResult(
-          _i2.GNetworkDetailsData? Function(
-                  _i2.GNetworkDetailsData?, _i2.GNetworkDetailsData?)?
+          _i2.GnetworkDetailsData? Function(
+                  _i2.GnetworkDetailsData?, _i2.GnetworkDetailsData?)?
               updateResult) =>
       _$this._updateResult = updateResult;
 
-  _i2.GNetworkDetailsDataBuilder? _optimisticResponse;
-  _i2.GNetworkDetailsDataBuilder get optimisticResponse =>
-      _$this._optimisticResponse ??= new _i2.GNetworkDetailsDataBuilder();
-  set optimisticResponse(_i2.GNetworkDetailsDataBuilder? optimisticResponse) =>
+  _i2.GnetworkDetailsDataBuilder? _optimisticResponse;
+  _i2.GnetworkDetailsDataBuilder get optimisticResponse =>
+      _$this._optimisticResponse ??= new _i2.GnetworkDetailsDataBuilder();
+  set optimisticResponse(_i2.GnetworkDetailsDataBuilder? optimisticResponse) =>
       _$this._optimisticResponse = optimisticResponse;
 
   String? _updateCacheHandlerKey;
@@ -286,11 +286,11 @@ class GNetworkDetailsReqBuilder
   set executeOnListen(bool? executeOnListen) =>
       _$this._executeOnListen = executeOnListen;
 
-  GNetworkDetailsReqBuilder() {
-    GNetworkDetailsReq._initializeBuilder(this);
+  GnetworkDetailsReqBuilder() {
+    GnetworkDetailsReq._initializeBuilder(this);
   }
 
-  GNetworkDetailsReqBuilder get _$this {
+  GnetworkDetailsReqBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _vars = $v.vars.toBuilder();
@@ -308,27 +308,27 @@ class GNetworkDetailsReqBuilder
   }
 
   @override
-  void replace(GNetworkDetailsReq other) {
+  void replace(GnetworkDetailsReq other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GNetworkDetailsReq;
+    _$v = other as _$GnetworkDetailsReq;
   }
 
   @override
-  void update(void Function(GNetworkDetailsReqBuilder)? updates) {
+  void update(void Function(GnetworkDetailsReqBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  GNetworkDetailsReq build() => _build();
+  GnetworkDetailsReq build() => _build();
 
-  _$GNetworkDetailsReq _build() {
-    _$GNetworkDetailsReq _$result;
+  _$GnetworkDetailsReq _build() {
+    _$GnetworkDetailsReq _$result;
     try {
       _$result = _$v ??
-          new _$GNetworkDetailsReq._(
+          new _$GnetworkDetailsReq._(
               vars: vars.build(),
               operation: BuiltValueNullFieldError.checkNotNull(
-                  operation, r'GNetworkDetailsReq', 'operation'),
+                  operation, r'GnetworkDetailsReq', 'operation'),
               requestId: requestId,
               updateResult: updateResult,
               optimisticResponse: _optimisticResponse?.build(),
@@ -336,7 +336,7 @@ class GNetworkDetailsReqBuilder
               updateCacheHandlerContext: updateCacheHandlerContext,
               fetchPolicy: fetchPolicy,
               executeOnListen: BuiltValueNullFieldError.checkNotNull(
-                  executeOnListen, r'GNetworkDetailsReq', 'executeOnListen'));
+                  executeOnListen, r'GnetworkDetailsReq', 'executeOnListen'));
     } catch (_) {
       late String _$failedField;
       try {
@@ -347,7 +347,7 @@ class GNetworkDetailsReqBuilder
         _optimisticResponse?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'GNetworkDetailsReq', _$failedField, e.toString());
+            r'GnetworkDetailsReq', _$failedField, e.toString());
       }
       rethrow;
     }

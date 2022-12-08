@@ -17,23 +17,23 @@ import 'package:graph_network_gql/query/__generated__/allocationQuery.var.gql.da
 
 part 'allocationQuery.req.gql.g.dart';
 
-abstract class GNetworkDetailsReq
+abstract class GnetworkDetailsReq
     implements
-        Built<GNetworkDetailsReq, GNetworkDetailsReqBuilder>,
-        _i1.OperationRequest<_i2.GNetworkDetailsData, _i3.GNetworkDetailsVars> {
-  GNetworkDetailsReq._();
+        Built<GnetworkDetailsReq, GnetworkDetailsReqBuilder>,
+        _i1.OperationRequest<_i2.GnetworkDetailsData, _i3.GnetworkDetailsVars> {
+  GnetworkDetailsReq._();
 
-  factory GNetworkDetailsReq([Function(GNetworkDetailsReqBuilder b) updates]) =
-      _$GNetworkDetailsReq;
+  factory GnetworkDetailsReq([Function(GnetworkDetailsReqBuilder b) updates]) =
+      _$GnetworkDetailsReq;
 
-  static void _initializeBuilder(GNetworkDetailsReqBuilder b) => b
+  static void _initializeBuilder(GnetworkDetailsReqBuilder b) => b
     ..operation = _i4.Operation(
       document: _i5.document,
-      operationName: 'NetworkDetails',
+      operationName: 'networkDetails',
     )
     ..executeOnListen = true;
   @override
-  _i3.GNetworkDetailsVars get vars;
+  _i3.GnetworkDetailsVars get vars;
   @override
   _i4.Operation get operation;
   @override
@@ -45,12 +45,12 @@ abstract class GNetworkDetailsReq
   String? get requestId;
   @override
   @BuiltValueField(serialize: false)
-  _i2.GNetworkDetailsData? Function(
-    _i2.GNetworkDetailsData?,
-    _i2.GNetworkDetailsData?,
+  _i2.GnetworkDetailsData? Function(
+    _i2.GnetworkDetailsData?,
+    _i2.GnetworkDetailsData?,
   )? get updateResult;
   @override
-  _i2.GNetworkDetailsData? get optimisticResponse;
+  _i2.GnetworkDetailsData? get optimisticResponse;
   @override
   String? get updateCacheHandlerKey;
   @override
@@ -60,17 +60,17 @@ abstract class GNetworkDetailsReq
   @override
   bool get executeOnListen;
   @override
-  _i2.GNetworkDetailsData? parseData(Map<String, dynamic> json) =>
-      _i2.GNetworkDetailsData.fromJson(json);
-  static Serializer<GNetworkDetailsReq> get serializer =>
-      _$gNetworkDetailsReqSerializer;
+  _i2.GnetworkDetailsData? parseData(Map<String, dynamic> json) =>
+      _i2.GnetworkDetailsData.fromJson(json);
+  static Serializer<GnetworkDetailsReq> get serializer =>
+      _$gnetworkDetailsReqSerializer;
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
-        GNetworkDetailsReq.serializer,
+        GnetworkDetailsReq.serializer,
         this,
       ) as Map<String, dynamic>);
-  static GNetworkDetailsReq? fromJson(Map<String, dynamic> json) =>
+  static GnetworkDetailsReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
-        GNetworkDetailsReq.serializer,
+        GnetworkDetailsReq.serializer,
         json,
       );
 }
