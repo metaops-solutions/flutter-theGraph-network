@@ -4,10 +4,20 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:gql/ast.dart' as _i1;
 
-const networkDetails = _i1.OperationDefinitionNode(
+const NetworkDetails = _i1.OperationDefinitionNode(
   type: _i1.OperationType.query,
-  name: _i1.NameNode(value: 'networkDetails'),
-  variableDefinitions: [],
+  name: _i1.NameNode(value: 'NetworkDetails'),
+  variableDefinitions: [
+    _i1.VariableDefinitionNode(
+      variable: _i1.VariableNode(name: _i1.NameNode(value: 'id')),
+      type: _i1.NamedTypeNode(
+        name: _i1.NameNode(value: 'ID'),
+        isNonNull: true,
+      ),
+      defaultValue: _i1.DefaultValueNode(value: null),
+      directives: [],
+    )
+  ],
   directives: [],
   selectionSet: _i1.SelectionSetNode(selections: [
     _i1.FieldNode(
@@ -19,10 +29,7 @@ const networkDetails = _i1.OperationDefinitionNode(
           value: _i1.ObjectValueNode(fields: [
             _i1.ObjectFieldNode(
               name: _i1.NameNode(value: 'id'),
-              value: _i1.StringValueNode(
-                value: '0x5fed46c4f1748213760bb0b0704a35203ced6e5c',
-                isBlock: false,
-              ),
+              value: _i1.VariableNode(name: _i1.NameNode(value: 'id')),
             )
           ]),
         )
@@ -185,4 +192,4 @@ const networkDetails = _i1.OperationDefinitionNode(
     )
   ]),
 );
-const document = _i1.DocumentNode(definitions: [networkDetails]);
+const document = _i1.DocumentNode(definitions: [NetworkDetails]);

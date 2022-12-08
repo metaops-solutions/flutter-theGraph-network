@@ -12,42 +12,42 @@ import 'package:graph_network_gql/graphql/__generated__/serializers.gql.dart'
 
 part 'allocationQuery.data.gql.g.dart';
 
-abstract class GnetworkDetailsData
-    implements Built<GnetworkDetailsData, GnetworkDetailsDataBuilder> {
-  GnetworkDetailsData._();
+abstract class GNetworkDetailsData
+    implements Built<GNetworkDetailsData, GNetworkDetailsDataBuilder> {
+  GNetworkDetailsData._();
 
-  factory GnetworkDetailsData(
-      [Function(GnetworkDetailsDataBuilder b) updates]) = _$GnetworkDetailsData;
+  factory GNetworkDetailsData(
+      [Function(GNetworkDetailsDataBuilder b) updates]) = _$GNetworkDetailsData;
 
-  static void _initializeBuilder(GnetworkDetailsDataBuilder b) =>
+  static void _initializeBuilder(GNetworkDetailsDataBuilder b) =>
       b..G__typename = 'Query';
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
-  BuiltList<GnetworkDetailsData_indexers> get indexers;
-  static Serializer<GnetworkDetailsData> get serializer =>
-      _$gnetworkDetailsDataSerializer;
+  BuiltList<GNetworkDetailsData_indexers> get indexers;
+  static Serializer<GNetworkDetailsData> get serializer =>
+      _$gNetworkDetailsDataSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GnetworkDetailsData.serializer,
+        GNetworkDetailsData.serializer,
         this,
       ) as Map<String, dynamic>);
-  static GnetworkDetailsData? fromJson(Map<String, dynamic> json) =>
+  static GNetworkDetailsData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-        GnetworkDetailsData.serializer,
+        GNetworkDetailsData.serializer,
         json,
       );
 }
 
-abstract class GnetworkDetailsData_indexers
+abstract class GNetworkDetailsData_indexers
     implements
-        Built<GnetworkDetailsData_indexers,
-            GnetworkDetailsData_indexersBuilder> {
-  GnetworkDetailsData_indexers._();
+        Built<GNetworkDetailsData_indexers,
+            GNetworkDetailsData_indexersBuilder> {
+  GNetworkDetailsData_indexers._();
 
-  factory GnetworkDetailsData_indexers(
-          [Function(GnetworkDetailsData_indexersBuilder b) updates]) =
-      _$GnetworkDetailsData_indexers;
+  factory GNetworkDetailsData_indexers(
+          [Function(GNetworkDetailsData_indexersBuilder b) updates]) =
+      _$GNetworkDetailsData_indexers;
 
-  static void _initializeBuilder(GnetworkDetailsData_indexersBuilder b) =>
+  static void _initializeBuilder(GNetworkDetailsData_indexersBuilder b) =>
       b..G__typename = 'Indexer';
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -57,32 +57,32 @@ abstract class GnetworkDetailsData_indexers
   _i2.GBigInt get allocatedTokens;
   String? get defaultDisplayName;
   _i2.GBigInt get delegatedTokens;
-  BuiltList<GnetworkDetailsData_indexers_allocations> get allocations;
-  static Serializer<GnetworkDetailsData_indexers> get serializer =>
-      _$gnetworkDetailsDataIndexersSerializer;
+  BuiltList<GNetworkDetailsData_indexers_allocations> get allocations;
+  static Serializer<GNetworkDetailsData_indexers> get serializer =>
+      _$gNetworkDetailsDataIndexersSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GnetworkDetailsData_indexers.serializer,
+        GNetworkDetailsData_indexers.serializer,
         this,
       ) as Map<String, dynamic>);
-  static GnetworkDetailsData_indexers? fromJson(Map<String, dynamic> json) =>
+  static GNetworkDetailsData_indexers? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-        GnetworkDetailsData_indexers.serializer,
+        GNetworkDetailsData_indexers.serializer,
         json,
       );
 }
 
-abstract class GnetworkDetailsData_indexers_allocations
+abstract class GNetworkDetailsData_indexers_allocations
     implements
-        Built<GnetworkDetailsData_indexers_allocations,
-            GnetworkDetailsData_indexers_allocationsBuilder> {
-  GnetworkDetailsData_indexers_allocations._();
+        Built<GNetworkDetailsData_indexers_allocations,
+            GNetworkDetailsData_indexers_allocationsBuilder> {
+  GNetworkDetailsData_indexers_allocations._();
 
-  factory GnetworkDetailsData_indexers_allocations(
-      [Function(GnetworkDetailsData_indexers_allocationsBuilder b)
-          updates]) = _$GnetworkDetailsData_indexers_allocations;
+  factory GNetworkDetailsData_indexers_allocations(
+      [Function(GNetworkDetailsData_indexers_allocationsBuilder b)
+          updates]) = _$GNetworkDetailsData_indexers_allocations;
 
   static void _initializeBuilder(
-          GnetworkDetailsData_indexers_allocationsBuilder b) =>
+          GNetworkDetailsData_indexers_allocationsBuilder b) =>
       b..G__typename = 'Allocation';
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -91,38 +91,38 @@ abstract class GnetworkDetailsData_indexers_allocations
   _i2.GAllocationStatus get status;
   String get id;
   int get createdAt;
-  GnetworkDetailsData_indexers_allocations_subgraphDeployment
+  GNetworkDetailsData_indexers_allocations_subgraphDeployment
       get subgraphDeployment;
   int get createdAtEpoch;
   int get createdAtBlockNumber;
-  static Serializer<GnetworkDetailsData_indexers_allocations> get serializer =>
-      _$gnetworkDetailsDataIndexersAllocationsSerializer;
+  static Serializer<GNetworkDetailsData_indexers_allocations> get serializer =>
+      _$gNetworkDetailsDataIndexersAllocationsSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GnetworkDetailsData_indexers_allocations.serializer,
+        GNetworkDetailsData_indexers_allocations.serializer,
         this,
       ) as Map<String, dynamic>);
-  static GnetworkDetailsData_indexers_allocations? fromJson(
+  static GNetworkDetailsData_indexers_allocations? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-        GnetworkDetailsData_indexers_allocations.serializer,
+        GNetworkDetailsData_indexers_allocations.serializer,
         json,
       );
 }
 
-abstract class GnetworkDetailsData_indexers_allocations_subgraphDeployment
+abstract class GNetworkDetailsData_indexers_allocations_subgraphDeployment
     implements
-        Built<GnetworkDetailsData_indexers_allocations_subgraphDeployment,
-            GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder> {
-  GnetworkDetailsData_indexers_allocations_subgraphDeployment._();
+        Built<GNetworkDetailsData_indexers_allocations_subgraphDeployment,
+            GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder> {
+  GNetworkDetailsData_indexers_allocations_subgraphDeployment._();
 
-  factory GnetworkDetailsData_indexers_allocations_subgraphDeployment(
+  factory GNetworkDetailsData_indexers_allocations_subgraphDeployment(
       [Function(
-              GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder
+              GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder
                   b)
-          updates]) = _$GnetworkDetailsData_indexers_allocations_subgraphDeployment;
+          updates]) = _$GNetworkDetailsData_indexers_allocations_subgraphDeployment;
 
   static void _initializeBuilder(
-          GnetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder
+          GNetworkDetailsData_indexers_allocations_subgraphDeploymentBuilder
               b) =>
       b..G__typename = 'SubgraphDeployment';
   @BuiltValueField(wireName: '__typename')
@@ -132,17 +132,17 @@ abstract class GnetworkDetailsData_indexers_allocations_subgraphDeployment
   _i2.GBigInt get stakedTokens;
   String? get originalName;
   String get id;
-  static Serializer<GnetworkDetailsData_indexers_allocations_subgraphDeployment>
+  static Serializer<GNetworkDetailsData_indexers_allocations_subgraphDeployment>
       get serializer =>
-          _$gnetworkDetailsDataIndexersAllocationsSubgraphDeploymentSerializer;
+          _$gNetworkDetailsDataIndexersAllocationsSubgraphDeploymentSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GnetworkDetailsData_indexers_allocations_subgraphDeployment.serializer,
+        GNetworkDetailsData_indexers_allocations_subgraphDeployment.serializer,
         this,
       ) as Map<String, dynamic>);
-  static GnetworkDetailsData_indexers_allocations_subgraphDeployment? fromJson(
+  static GNetworkDetailsData_indexers_allocations_subgraphDeployment? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-        GnetworkDetailsData_indexers_allocations_subgraphDeployment.serializer,
+        GNetworkDetailsData_indexers_allocations_subgraphDeployment.serializer,
         json,
       );
 }

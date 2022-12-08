@@ -80,14 +80,14 @@ import 'package:graph_network_gql/graphql/__generated__/schema.schema.gql.dart'
         G_SubgraphErrorPolicy_;
 import 'package:graph_network_gql/query/__generated__/allocationQuery.data.gql.dart'
     show
-        GnetworkDetailsData,
-        GnetworkDetailsData_indexers,
-        GnetworkDetailsData_indexers_allocations,
-        GnetworkDetailsData_indexers_allocations_subgraphDeployment;
+        GNetworkDetailsData,
+        GNetworkDetailsData_indexers,
+        GNetworkDetailsData_indexers_allocations,
+        GNetworkDetailsData_indexers_allocations_subgraphDeployment;
 import 'package:graph_network_gql/query/__generated__/allocationQuery.req.gql.dart'
-    show GnetworkDetailsReq;
+    show GNetworkDetailsReq;
 import 'package:graph_network_gql/query/__generated__/allocationQuery.var.gql.dart'
-    show GnetworkDetailsVars;
+    show GNetworkDetailsVars;
 
 part 'serializers.gql.g.dart';
 
@@ -136,6 +136,12 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GNameSignal_filter,
   GNameSignal_orderBy,
   GNameSystem,
+  GNetworkDetailsData,
+  GNetworkDetailsData_indexers,
+  GNetworkDetailsData_indexers_allocations,
+  GNetworkDetailsData_indexers_allocations_subgraphDeployment,
+  GNetworkDetailsReq,
+  GNetworkDetailsVars,
   GNetwork_filter,
   GNetwork_orderBy,
   GOrderDirection,
@@ -164,11 +170,5 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GTransaction_filter,
   GTransaction_orderBy,
   G_SubgraphErrorPolicy_,
-  GnetworkDetailsData,
-  GnetworkDetailsData_indexers,
-  GnetworkDetailsData_indexers_allocations,
-  GnetworkDetailsData_indexers_allocations_subgraphDeployment,
-  GnetworkDetailsReq,
-  GnetworkDetailsVars,
 ])
 final Serializers serializers = _serializersBuilder.build();

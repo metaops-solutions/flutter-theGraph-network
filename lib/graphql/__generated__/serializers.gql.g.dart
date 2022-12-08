@@ -49,6 +49,13 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GNameSignal_filter.serializer)
       ..add(GNameSignal_orderBy.serializer)
       ..add(GNameSystem.serializer)
+      ..add(GNetworkDetailsData.serializer)
+      ..add(GNetworkDetailsData_indexers.serializer)
+      ..add(GNetworkDetailsData_indexers_allocations.serializer)
+      ..add(GNetworkDetailsData_indexers_allocations_subgraphDeployment
+          .serializer)
+      ..add(GNetworkDetailsReq.serializer)
+      ..add(GNetworkDetailsVars.serializer)
       ..add(GNetwork_filter.serializer)
       ..add(GNetwork_orderBy.serializer)
       ..add(GOrderDirection.serializer)
@@ -77,21 +84,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GTransaction_filter.serializer)
       ..add(GTransaction_orderBy.serializer)
       ..add(G_SubgraphErrorPolicy_.serializer)
-      ..add(GnetworkDetailsData.serializer)
-      ..add(GnetworkDetailsData_indexers.serializer)
-      ..add(GnetworkDetailsData_indexers_allocations.serializer)
-      ..add(GnetworkDetailsData_indexers_allocations_subgraphDeployment
-          .serializer)
-      ..add(GnetworkDetailsReq.serializer)
-      ..add(GnetworkDetailsVars.serializer)
       ..addBuilderFactory(
           const FullType(
-              BuiltList, const [const FullType(GnetworkDetailsData_indexers)]),
-          () => new ListBuilder<GnetworkDetailsData_indexers>())
+              BuiltList, const [const FullType(GNetworkDetailsData_indexers)]),
+          () => new ListBuilder<GNetworkDetailsData_indexers>())
       ..addBuilderFactory(
           const FullType(BuiltList,
-              const [const FullType(GnetworkDetailsData_indexers_allocations)]),
-          () => new ListBuilder<GnetworkDetailsData_indexers_allocations>())
+              const [const FullType(GNetworkDetailsData_indexers_allocations)]),
+          () => new ListBuilder<GNetworkDetailsData_indexers_allocations>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())

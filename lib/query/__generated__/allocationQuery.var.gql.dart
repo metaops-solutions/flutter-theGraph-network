@@ -9,22 +9,23 @@ import 'package:graph_network_gql/graphql/__generated__/serializers.gql.dart'
 
 part 'allocationQuery.var.gql.g.dart';
 
-abstract class GnetworkDetailsVars
-    implements Built<GnetworkDetailsVars, GnetworkDetailsVarsBuilder> {
-  GnetworkDetailsVars._();
+abstract class GNetworkDetailsVars
+    implements Built<GNetworkDetailsVars, GNetworkDetailsVarsBuilder> {
+  GNetworkDetailsVars._();
 
-  factory GnetworkDetailsVars(
-      [Function(GnetworkDetailsVarsBuilder b) updates]) = _$GnetworkDetailsVars;
+  factory GNetworkDetailsVars(
+      [Function(GNetworkDetailsVarsBuilder b) updates]) = _$GNetworkDetailsVars;
 
-  static Serializer<GnetworkDetailsVars> get serializer =>
-      _$gnetworkDetailsVarsSerializer;
+  String get id;
+  static Serializer<GNetworkDetailsVars> get serializer =>
+      _$gNetworkDetailsVarsSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GnetworkDetailsVars.serializer,
+        GNetworkDetailsVars.serializer,
         this,
       ) as Map<String, dynamic>);
-  static GnetworkDetailsVars? fromJson(Map<String, dynamic> json) =>
+  static GNetworkDetailsVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-        GnetworkDetailsVars.serializer,
+        GNetworkDetailsVars.serializer,
         json,
       );
 }
