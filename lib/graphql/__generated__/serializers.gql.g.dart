@@ -70,6 +70,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GSubgraphCategoryRelation_orderBy.serializer)
       ..add(GSubgraphCategory_filter.serializer)
       ..add(GSubgraphCategory_orderBy.serializer)
+      ..add(GSubgraphDeploymentQueryData.serializer)
+      ..add(GSubgraphDeploymentQueryData_subgraphDeployments.serializer)
+      ..add(GSubgraphDeploymentQueryReq.serializer)
+      ..add(GSubgraphDeploymentQueryVars.serializer)
       ..add(GSubgraphDeployment_filter.serializer)
       ..add(GSubgraphDeployment_orderBy.serializer)
       ..add(GSubgraphNameQueryData.serializer)
@@ -96,6 +100,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList,
               const [const FullType(GNetworkDetailsData_indexers_allocations)]),
           () => new ListBuilder<GNetworkDetailsData_indexers_allocations>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GSubgraphDeploymentQueryData_subgraphDeployments)
+          ]),
+          () => new ListBuilder<
+              GSubgraphDeploymentQueryData_subgraphDeployments>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())

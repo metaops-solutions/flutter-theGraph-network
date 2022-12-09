@@ -1,0 +1,9 @@
+query SubgraphDeploymentQuery($id: String) {
+    subgraphDeployments (where: {ipfsHash: $id}) {
+        originalName
+        createdAt
+
+    }
+}
+
+
