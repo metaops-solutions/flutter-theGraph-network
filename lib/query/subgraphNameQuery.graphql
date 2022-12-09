@@ -1,0 +1,9 @@
+query SubgraphNameQuery($id: ID!) {
+        subgraph(id: $id) {
+            displayName
+            createdAt
+            image
+        }
+}
+
+

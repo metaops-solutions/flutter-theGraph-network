@@ -88,6 +88,12 @@ import 'package:graph_network_gql/query/__generated__/allocationQuery.req.gql.da
     show GNetworkDetailsReq;
 import 'package:graph_network_gql/query/__generated__/allocationQuery.var.gql.dart'
     show GNetworkDetailsVars;
+import 'package:graph_network_gql/query/__generated__/subgraphNameQuery.data.gql.dart'
+    show GSubgraphNameQueryData, GSubgraphNameQueryData_subgraph;
+import 'package:graph_network_gql/query/__generated__/subgraphNameQuery.req.gql.dart'
+    show GSubgraphNameQueryReq;
+import 'package:graph_network_gql/query/__generated__/subgraphNameQuery.var.gql.dart'
+    show GSubgraphNameQueryVars;
 
 part 'serializers.gql.g.dart';
 
@@ -158,6 +164,10 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GSubgraphCategory_orderBy,
   GSubgraphDeployment_filter,
   GSubgraphDeployment_orderBy,
+  GSubgraphNameQueryData,
+  GSubgraphNameQueryData_subgraph,
+  GSubgraphNameQueryReq,
+  GSubgraphNameQueryVars,
   GSubgraphVersion_filter,
   GSubgraphVersion_orderBy,
   GSubgraph_filter,
